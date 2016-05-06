@@ -5,7 +5,7 @@ description: "The Difido project is an open source project for creating awesome 
 baseurl: "/difido-reports-site"
 url: "http://yourdomain.com"
 twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  itaiag
 
 # Build settings
 markdown: kramdown

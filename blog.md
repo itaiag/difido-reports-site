@@ -1,23 +1,22 @@
 ---
-layout: page
-title:  Blog
-date:   2016-05-05 16:38:35
-categories: jekyll difido
+layout: default
+title: Blog
 permalink: /blog/
 ---
 
-This is where I am going to write some insturctions of how to use the Difido server.
+<div class="home">
 
-Is it going to change on runtime?
+  <h1>Posts</h1>
 
-Jekyll also offers powerful support for code snippets:
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 
-{% highlight java %}
-public static void main(String[] args){
-	System.out.println("Hello Jekyll");
-}
-{% endhighlight %}
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-
-[jekyll-gh]: https://github.com/jekyll/jekyll
-[jekyll]:    http://jekyllrb.com
+</div>
